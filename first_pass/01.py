@@ -8,7 +8,7 @@ def file_input():
     L = []
     R = []
 
-    f = open("01.txt", "r")
+    f = open("inputs/01.txt", "r")
     while f:
         line = f.readline()
         if len(line) > 0:

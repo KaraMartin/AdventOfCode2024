@@ -13,7 +13,7 @@ T = ["MMMSXXMASM",
 "MXMXAXMASX"]
 
 # get input
-with open("04.txt") as f:
+with open("inputs/04.txt") as f:
     lines = f.readlines()
 
 X = "X"
@@ -75,8 +75,9 @@ def pad_wordsearch(wordsearch):
     new_wordsearch += ["." * width for _ in range(len_XMAS)]
     return new_wordsearch
 
-#print(f"Test input part 1: {p1(T)}")
-#print(f"Part 1: {len(lines), p1(lines)}")
+print(f"Test input part 1: {p1(T)}")
+# should be 18
+print(f"Part 1: {p1(lines)}")
 
 def p2(wordsearch):
     total = 0
@@ -101,4 +102,5 @@ def p2(wordsearch):
     return total
 
 print(f"Test input part 2: {p2(T)}")
+# should be 9
 print(f"Part 2: {p2(lines)}")
