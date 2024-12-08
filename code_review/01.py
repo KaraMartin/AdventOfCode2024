@@ -8,6 +8,8 @@ class IDList:
     right: list[int]
 
     def __post_init__(self):
+        self.left = sorted(self.left)
+        self.right = sorted(self.right)
         self.frequency_r = Counter(self.right)
 
     def distances(self) -> list[int]:
@@ -20,16 +22,13 @@ class IDList:
         return sum([l * self.frequency_r[l] for l in self.left])
 
 def _parse_input(input_str) -> IDList:
-    parsed_left, parsed_right = [], []
-    for row in input_str:
-        if not row:
-            continue
-        left_location, right_location = [int(n) for n in row.split()]
-        parsed_left.append(left_location)
-        parsed_right.append(right_location)
-    parsed_left.sort()
-    parsed_right.sort()
-    return IDList(left=parsed_left, right=parsed_right)
+    left_nums, right_nums = zip(
+        *[
+            map(int, line.split())
+            for line in input_str.strip().split("\n")
+        ]
+    )
+    return IDList(left=left_nums, right=right_nums)
 
 def _load_test_input() -> IDList:
     test_input = """3   4
@@ -38,11 +37,11 @@ def _load_test_input() -> IDList:
     1   3
     3   9
     3   3"""
-    return _parse_input(test_input.split("\n"))
+    return _parse_input(test_input)
 
 def _load_actual_input() -> IDList:
     with open("inputs/01.txt", "r") as f:
-        return _parse_input(f.readlines())
+        return _parse_input(f.read())
 
 def main()  -> None:
     # Part 1:
