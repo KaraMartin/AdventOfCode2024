@@ -8,7 +8,7 @@ T = """7 6 4 2 1
 8 6 4 4 1
 1 3 6 7 9"""
 
-with open("02.txt") as f:
+with open("inputs/02.txt") as f:
     A = f.readlines()
 
 def process(lines):
@@ -58,8 +58,10 @@ def p2(lines):
 
 ## PART 1
 print(f"Test input part 1: {p1(T)}")
+# should be 2
 print(f"Part 1: {p1(A)}")
 
 ## PART 2
 print(f"Test input part 2: {p2(T)}")
+# should be 4
 print(f"Part 2: {p2(A)}")

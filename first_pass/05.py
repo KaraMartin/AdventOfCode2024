@@ -36,7 +36,7 @@ T = ["47|53",
 "97,13,75,29,47"]
 
 # get input
-with open("05.txt") as f:
+with open("inputs/05.txt") as f:
     lines = f.readlines()
 
 def parse_input(lines):
@@ -84,8 +84,9 @@ def p1(inp):
         total += get_middle(update) if check_update(update) else 0
     return total
 
-#print(f"Test input part 1: {p1(parsed_T)}")
-#print(f"Part 1: {p1(parsed_lines)}")
+print(f"Test input part 1: {p1(parsed_T)}")
+# should be 143
+print(f"Part 1: {p1(parsed_lines)}")
 
 def p2(inp):
     # now take only the incorrect updates and fix them
@@ -151,9 +152,10 @@ def p2(inp):
                     update_copy[i+1] = update_copy[i]
                     update_copy[i] = tmp
         if check_update(update_copy) == True:
-            print(f"Fixed: {update_copy}")
+            #print(f"Fixed: {update_copy}")
+            pass
         else:
-            print(f"going again... {update_copy}")
+            #print(f"going again... {update_copy}")
             return try_fixing(update_copy)
         return update_copy
 
@@ -165,6 +167,8 @@ def p2(inp):
     return total
 
 print(f"Test input part 2: {p2(parsed_T)}")
+# should be 123
+
 #for key in parsed_lines["rules"]:
 #    print(f"{key}: {len([page for page in parsed_lines['rules'][key] if page in parsed_lines['rules'].keys()])}")
 #for i in [11, 12, 13, 14, 15, 18, 19, 23, 26, 28, 29, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43, 45, 48, 51, 53, 54, 55, 58, 59, 61, 62, 68, 69, 72, 73, 74, 76, 78, 82, 83, 85, 87, 88, 92, 96, 97, 98, 99]:

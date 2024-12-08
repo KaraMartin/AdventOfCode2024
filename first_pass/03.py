@@ -14,7 +14,7 @@ COMMA = ","
 R_PAREN = ")"
 
 # get input
-with open("03.txt") as f:
+with open("inputs/03.txt") as f:
     A = "".join(a for a in f.readlines())
 
 def p1(memory):
@@ -47,6 +47,7 @@ def p1(memory):
     return total
 
 print(f"Test input part 1: {p1(T)}")
+# should be 161
 print(f"Part 1: {p1(A)}")
 
 T2 = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
@@ -93,4 +94,5 @@ def p2(memory):
     return total
 
 print(f"Test input part 2: {p2(T2)}")
+# should be 48
 print(f"Part 2: {p2(A)}")

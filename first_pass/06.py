@@ -16,7 +16,7 @@ T_in = """....#.....
 
 
 # get input
-with open("06.txt") as f:
+with open("inputs/06.txt") as f:
     lines = f.read()
 
 def parse_input(inp):
@@ -213,5 +213,6 @@ def p2(inp):
     return num_positions
 
 print(f"Test input part 2: {p2(T)}")
+# should be 6
 print(f"Part 2: {p2(A)}")
 

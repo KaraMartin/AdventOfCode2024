@@ -1,7 +1,5 @@
 # Advent of Code 2024
 # Day 1 Problem 7
-from collections import defaultdict, Counter
-from bisect import insort
 
 T_in = """190: 10 19
 3267: 81 40 27
@@ -14,7 +12,7 @@ T_in = """190: 10 19
 292: 11 6 16 20"""
 
 # get input
-with open("07.txt") as f:
+with open("inputs/07.txt") as f:
     lines = f.read()
 
 def parse_input(inp):
@@ -48,7 +46,7 @@ def p1(inp):
     return total
 
 print(f"Test input part 1: {p1(T)}")
-# should be 
+# should be 3749
 
 print(f"Part 1: {p1(A)}")
 
@@ -71,5 +69,5 @@ def p2(inp):
     return total
 
 print(f"Test input part 2: {p2(T)}")
+# should be 11387
 print(f"Part 2: {p2(A)}")
-
