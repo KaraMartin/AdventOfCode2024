@@ -1,6 +1,13 @@
 from collections import Counter
 import dataclasses
 
+TEST_INPUT = """3   4
+4   3
+2   5
+1   3
+3   9
+3   3"""
+ACTUAL_INPUT_FILENAME = "inputs/01.txt"
 
 @dataclasses.dataclass
 class IDList:
@@ -31,16 +38,10 @@ def _parse_input(input_str) -> IDList:
     return IDList(left=left_nums, right=right_nums)
 
 def _load_test_input() -> IDList:
-    test_input = """3   4
-    4   3
-    2   5
-    1   3
-    3   9
-    3   3"""
-    return _parse_input(test_input)
+    return _parse_input(TEST_INPUT)
 
 def _load_actual_input() -> IDList:
-    with open("inputs/01.txt", "r") as f:
+    with open(ACTUAL_INPUT_FILENAME, "r") as f:
         return _parse_input(f.read())
 
 def main()  -> None:
