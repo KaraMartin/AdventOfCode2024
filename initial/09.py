@@ -1,6 +1,5 @@
 # Advent of Code 2024
-# Day 1 Problem 8
-from collections import defaultdict, Counter
+# Day 1 Problem 9
 import dataclasses
 
 TEST_INPUT = """2333133121414131402"""

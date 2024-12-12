@@ -1,6 +1,5 @@
 # Advent of Code 2024
-# Day 1 Problem 8
-from collections import defaultdict, Counter
+# Day 1 Problem 10
 import dataclasses
 
 TEST_INPUT_1 = """0123
@@ -144,10 +143,6 @@ def _load_actual_input() -> TopoMap:
         return _parse_input(f.read().strip())
 
 def main()  -> None:
-    # Part 1:
-    #   a
-    #   b
-    #   c
     test = _load_test_input(TEST_INPUT_2)
     #print(f"Test: \n{test}\n with trailheads: \n{[t for t in test.trailheads]}")
     print(f"Test 1: {test.dfs()}")
