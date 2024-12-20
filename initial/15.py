@@ -1,8 +1,7 @@
 # Advent of Code 2024
-# Day 1 Problem 13
+# Day 1 Problem 15
 import dataclasses
 from collections import defaultdict
-from functools import reduce
 
 TEST_INPUT_1 = """##########
 #..O..O.O#
